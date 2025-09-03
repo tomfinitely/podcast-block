@@ -1,0 +1,29 @@
+{
+	"name": "podcast-block",
+	"version": "0.1.0",
+	"description": "A WordPress block that fetches and displays podcasts from various platforms including Spotify, Overcast, Apple Podcasts, and RSS feeds.",
+	"author": "tomfinitely",
+	"license": "GPL-2.0-or-later",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tomfinitely/podcast-block.git"
+	},
+	"homepage": "https://github.com/tomfinitely/podcast-block",
+	"bugs": {
+		"url": "https://github.com/tomfinitely/podcast-block/issues"
+	},
+	"keywords": ["wordpress", "block", "podcast", "audio", "gutenberg", "spotify", "overcast", "rss"],
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --blocks-manifest",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --blocks-manifest"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.22.0"
+	}
+}

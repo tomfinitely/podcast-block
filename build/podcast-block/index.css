@@ -1,0 +1,154 @@
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/podcast-block/editor.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-podcast-block-podcast-block .podcast-block-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.wp-block-podcast-block-podcast-block .podcast-block-editor {
+  padding: 20px;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-placeholder-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-placeholder-controls .components-base-control {
+  margin-bottom: 0;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-content .podcast-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-content .podcast-block-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-content .podcast-block-header .podcast-block-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-content .podcast-block-header .podcast-block-meta .platform-badge {
+  background: #0073aa;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-content .podcast-block-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px;
+  color: #666;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-content .podcast-block-loading .components-spinner {
+  margin: 0;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-content .podcast-block-inner-blocks .wp-block {
+  margin-bottom: 20px;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-content .podcast-block-inner-blocks .wp-block:last-child {
+  margin-bottom: 0;
+}
+.wp-block-podcast-block-podcast-block .components-panel__body .components-base-control {
+  margin-bottom: 16px;
+}
+.wp-block-podcast-block-podcast-block .components-panel__body .components-base-control:last-child {
+  margin-bottom: 0;
+}
+.wp-block-podcast-block-podcast-block .components-panel__body .components-button {
+  width: 100%;
+  justify-content: center;
+}
+.wp-block-podcast-block-podcast-block .components-notice {
+  margin: 16px 0;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-platform-links {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-platform-links h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #495057;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-platform-links .platform-links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-platform-links .platform-links-grid .platform-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #495057;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-platform-links .platform-links-grid .platform-link:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+  text-decoration: none;
+  color: #495057;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-platform-links .platform-links-grid .platform-link .platform-icon {
+  font-size: 14px;
+}
+.wp-block-podcast-block-podcast-block .podcast-block-platform-links .platform-links-grid .platform-link .platform-label {
+  font-weight: 500;
+}
+.wp-block-podcast-block-podcast-block .quantity-badge {
+  background: #28a745;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card {
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+}
+.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card:last-child {
+  margin-bottom: 0;
+}
+.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card .components-card__body {
+  padding: 16px;
+}
+.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card .components-base-control {
+  margin-bottom: 12px;
+}
+.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card .components-base-control:last-child {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=index.css.map*/
