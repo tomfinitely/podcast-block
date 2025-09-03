@@ -1,0 +1,63 @@
+# Node.js dependencies and artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+
+# Build artifacts
+build/Release
+*.tgz
+
+# WordPress plugin zip files
+*.zip
+
+# Environment and configuration
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Cache directories
+.eslintcache
+.cache/
+.parcel-cache/
+
+# WordPress specific
+wp-config.php
+.htaccess
+
+# Local development
+.local
+.tmp
+temp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
