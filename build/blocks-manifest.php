@@ -9,7 +9,7 @@ return array(
 		'title' => 'Podcast Block',
 		'category' => 'widgets',
 		'icon' => 'microphone',
-		'description' => 'A block that fetches and displays podcasts from Spotify, Overcast, and other podcast platforms.',
+		'description' => 'A block that fetches and displays podcasts from Spotify, Apple Podcasts, and other podcast platforms.',
 		'example' => array(
 			
 		),

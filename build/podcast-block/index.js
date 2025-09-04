@@ -8,7 +8,7 @@
   \**************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"podcast-block/podcast-block","version":"0.1.0","title":"Podcast Block","category":"widgets","icon":"microphone","description":"A block that fetches and displays podcasts from Spotify, Overcast, and other podcast platforms.","example":{},"attributes":{"profileUrl":{"type":"string","default":""},"platform":{"type":"string","default":"spotify"},"quantity":{"type":"number","default":5},"platformLinks":{"type":"array","default":[]},"isLoading":{"type":"boolean","default":false},"error":{"type":"string","default":""}},"supports":{"html":false,"innerBlocks":true},"textdomain":"podcast-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"podcast-block/podcast-block","version":"0.1.0","title":"Podcast Block","category":"widgets","icon":"microphone","description":"A block that fetches and displays podcasts from Spotify, Apple Podcasts, and other podcast platforms.","example":{},"attributes":{"profileUrl":{"type":"string","default":""},"platform":{"type":"string","default":"spotify"},"quantity":{"type":"number","default":5},"platformLinks":{"type":"array","default":[]},"isLoading":{"type":"boolean","default":false},"error":{"type":"string","default":""}},"supports":{"html":false,"innerBlocks":true},"textdomain":"podcast-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ }),
 
@@ -108,9 +108,6 @@ function Edit({
     label: 'Spotify',
     value: 'spotify'
   }, {
-    label: 'Overcast',
-    value: 'overcast'
-  }, {
     label: 'Apple Podcasts',
     value: 'apple'
   }, {
@@ -136,7 +133,6 @@ function Edit({
   // Platform icons mapping
   const platformIcons = {
     spotify: '🎵',
-    overcast: '☁️',
     apple: '🍎',
     acast: '🅰️',
     castos: '🎙️',
@@ -262,7 +258,7 @@ function Edit({
           value: localUrl,
           onChange: setLocalUrl,
           placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enter podcast profile URL...', 'podcast-block'),
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enter the URL of the podcast profile page (e.g., Spotify artist page, Overcast profile, etc.)', 'podcast-block')
+          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enter the URL of the podcast profile page (e.g., Spotify artist page, Apple Podcasts profile, etc.)', 'podcast-block')
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Number of Podcasts', 'podcast-block'),
           value: quantity,
@@ -555,7 +551,6 @@ function save({
   // Platform icons mapping
   const platformIcons = {
     spotify: '🎵',
-    overcast: '☁️',
     apple: '🍎',
     acast: '🅰️',
     castos: '🎙️',
@@ -569,9 +564,6 @@ function save({
   const platformOptions = [{
     label: 'Spotify',
     value: 'spotify'
-  }, {
-    label: 'Overcast',
-    value: 'overcast'
   }, {
     label: 'Apple Podcasts',
     value: 'apple'

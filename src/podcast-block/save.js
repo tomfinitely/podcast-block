@@ -27,7 +27,6 @@ export default function save({ attributes }) {
 	// Platform icons mapping
 	const platformIcons = {
 		spotify: '🎵',
-		overcast: '☁️',
 		apple: '🍎',
 		acast: '🅰️',
 		castos: '🎙️',
@@ -40,7 +39,6 @@ export default function save({ attributes }) {
 	// Platform options for labels
 	const platformOptions = [
 		{ label: 'Spotify', value: 'spotify' },
-		{ label: 'Overcast', value: 'overcast' },
 		{ label: 'Apple Podcasts', value: 'apple' },
 		{ label: 'Acast', value: 'acast' },
 		{ label: 'Castos', value: 'castos' },

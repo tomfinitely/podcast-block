@@ -67,7 +67,6 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 	// Platform options
 	const platformOptions = [
 		{ label: 'Spotify', value: 'spotify' },
-		{ label: 'Overcast', value: 'overcast' },
 		{ label: 'Apple Podcasts', value: 'apple' },
 		{ label: 'Acast', value: 'acast' },
 		{ label: 'Castos', value: 'castos' },
@@ -80,7 +79,6 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 	// Platform icons mapping
 	const platformIcons = {
 		spotify: '🎵',
-		overcast: '☁️',
 		apple: '🍎',
 		acast: '🅰️',
 		castos: '🎙️',
@@ -198,7 +196,7 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 						value={localUrl}
 						onChange={setLocalUrl}
 						placeholder={__('Enter podcast profile URL...', 'podcast-block')}
-						help={__('Enter the URL of the podcast profile page (e.g., Spotify artist page, Overcast profile, etc.)', 'podcast-block')}
+						help={__('Enter the URL of the podcast profile page (e.g., Spotify artist page, Apple Podcasts profile, etc.)', 'podcast-block')}
 					/>
 					<RangeControl
 						label={__('Number of Podcasts', 'podcast-block')}

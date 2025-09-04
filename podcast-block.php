@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Podcast Block
  * Plugin URI:        https://github.com/tomfinitely/podcast-block
- * Description:       A WordPress block that fetches and displays podcasts from various platforms including Spotify, Overcast, Apple Podcasts, and RSS feeds.
+ * Description:       A WordPress block that fetches and displays podcasts from various platforms including Spotify , Apple Podcasts, and RSS feeds.
  * Version:           0.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
@@ -111,7 +111,7 @@ function podcast_block_fetch_podcasts( $request ) {
 	}
 
 	// Validate platform
-	$allowed_platforms = array( 'spotify', 'overcast', 'apple', 'acast', 'castos', 'libsyn', 'transistor', 'pocketcasts', 'rss' );
+	$allowed_platforms = array( 'spotify', 'apple', 'acast', 'castos', 'libsyn', 'transistor', 'pocketcasts', 'rss' );
 	if ( ! in_array( $platform, $allowed_platforms, true ) ) {
 		return new WP_Error( 'invalid_platform', __( 'Invalid platform specified.', 'podcast-block' ), array( 'status' => 400 ) );
 	}
@@ -147,9 +147,6 @@ function podcast_block_scrape_podcasts( $url, $platform ) {
 	switch ( $platform ) {
 		case 'spotify':
 			$podcasts = podcast_block_scrape_spotify( $url );
-			break;
-		case 'overcast':
-			$podcasts = podcast_block_scrape_overcast( $url );
 			break;
 		case 'apple':
 			$podcasts = podcast_block_scrape_apple_podcasts( $url );
@@ -307,51 +304,6 @@ function podcast_block_scrape_spotify( $url ) {
 		}
 	}
 
-	return $podcasts;
-}
-
-/**
- * Scrape Overcast podcast data
- *
- * @param string $url Overcast URL.
- * @return array Array of podcast data.
- */
-function podcast_block_scrape_overcast( $url ) {
-	$podcasts = array();
-	
-	// Extract show ID from Overcast URL
-	// URLs like: https://overcast.fm/+abc123def
-	if ( preg_match( '/overcast\.fm\/\+([a-zA-Z0-9]+)/', $url, $matches ) ) {
-		$show_id = $matches[1];
-		
-		// Try to scrape the Overcast page for RSS feed
-		$overcast_page = wp_remote_get( $url, array( 
-			'timeout' => 15,
-			'user-agent' => 'Mozilla/5.0 (compatible; WordPress Podcast Block)',
-			'headers' => array(
-				'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
-			)
-		) );
-		
-		if ( ! is_wp_error( $overcast_page ) ) {
-			$page_content = wp_remote_retrieve_body( $overcast_page );
-			
-			// Look for RSS feed URL in the page content
-			if ( preg_match( '/"feed_url":"([^"]+)"/', $page_content, $rss_matches ) ) {
-				$rss_url = $rss_matches[1];
-				$rss_url = str_replace( '\\/', '/', $rss_url ); // Unescape forward slashes
-				
-				// Fetch the RSS feed
-				$podcasts = podcast_block_fetch_rss_feed( $rss_url );
-			}
-		}
-		
-		// Create placeholder if we can't find RSS feed
-		if ( empty( $podcasts ) ) {
-			$podcasts = podcast_block_create_placeholder_podcasts( 'Overcast', $show_id );
-		}
-	}
-	
 	return $podcasts;
 }
 
