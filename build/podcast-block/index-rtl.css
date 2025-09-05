@@ -134,19 +134,31 @@
   font-weight: 500;
   margin-right: 8px;
 }
-.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card {
-  margin-bottom: 16px;
-  border: 1px solid #ddd;
+
+/* Sidebar (InspectorControls) styles must live outside the block wrapper */
+.block-editor-block-inspector {
+  /* Optional: general spacing for this block's inspector controls */
 }
-.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card:last-child {
+.block-editor-block-inspector .platform-links-controls .platform-link-card {
+  border: 1px solid #ddd;
+  margin-bottom: 16px !important;
+}
+.block-editor-block-inspector .platform-links-controls .platform-link-card:last-child {
   margin-bottom: 0;
 }
-.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card .components-card__body {
+.block-editor-block-inspector .platform-links-controls .platform-link-card .components-card__body {
   padding: 16px;
 }
-.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card .components-base-control {
+.block-editor-block-inspector .platform-links-controls .components-base-control {
   margin-bottom: 12px;
 }
-.wp-block-podcast-block-podcast-block .platform-links-controls .platform-link-card .components-base-control:last-child {
+.block-editor-block-inspector .platform-links-controls .components-base-control:last-child {
   margin-bottom: 0;
+}
+.block-editor-block-inspector .components-panel__body .components-base-control {
+  margin-bottom: 16px;
+}
+.block-editor-block-inspector .components-panel__body .components-button:not(.components-panel__body-toggle) {
+  width: 100%;
+  justify-content: center;
 }

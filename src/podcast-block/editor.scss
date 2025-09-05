@@ -167,11 +167,14 @@
 		margin-left: 8px;
 	}
 
-	// Platform links controls in inspector
+}
+
+/* Sidebar (InspectorControls) styles must live outside the block wrapper */
+.block-editor-block-inspector {
 	.platform-links-controls {
 		.platform-link-card {
-			margin-bottom: 16px;
 			border: 1px solid #ddd;
+			margin-bottom: 16px !important;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -180,14 +183,26 @@
 			.components-card__body {
 				padding: 16px;
 			}
+		}
 
-			.components-base-control {
-				margin-bottom: 12px;
+		.components-base-control {
+			margin-bottom: 12px;
 
-				&:last-child {
-					margin-bottom: 0;
-				}
+			&:last-child {
+				margin-bottom: 0;
 			}
+		}
+	}
+
+	/* Optional: general spacing for this block's inspector controls */
+	.components-panel__body {
+		.components-base-control {
+			margin-bottom: 16px;
+		}
+
+		.components-button:not(.components-panel__body-toggle) {
+			width: 100%;
+			justify-content: center;
 		}
 	}
 }
